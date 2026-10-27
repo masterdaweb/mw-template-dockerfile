@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dockerfile · Master da Web</title>
+  <style>
+:root { --bg: #f7f7f8; --card: #fff; --text: #18181b; --muted: #71717a; --line: #e4e4e7; --accent: #1d63ed; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0f0f11; --card: #18181b; --text: #f4f4f5; --muted: #a1a1aa; --line: #27272a; --accent: #6ea8ff; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 40px 16px 64px; }
+.brand { color: var(--muted); font-size: 13px; letter-spacing: .02em; }
+h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 8px; }
+h2 { font-size: 17px; margin: 0 0 14px; }
+.lead { color: var(--muted); margin: 0 0 28px; max-width: 640px; }
+section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+ol, ul { margin: 0; padding-left: 20px; } li { margin: 6px 0; }
+code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--bg); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">Dockerfile · Master da Web</div>
+  <h1>Seu app com Dockerfile está no ar</h1>
+  <p class="lead">A plataforma encontrou um Dockerfile na raiz e o construiu como ele é: o que ele monta é o que roda. Esta página é o nginx servindo um arquivo estático.</p>
+  <section><h2>O que todo Dockerfile aqui precisa</h2><ul><li>Escutar na porta de <code>$PORT</code> (8080, a menos que você mude a porta do serviço).</li><li>Escutar em <code>0.0.0.0</code>, nunca só em localhost.</li><li>Gravar o que precisa durar no Object Storage ou num banco: o disco do container começa vazio a cada deploy.</li></ul></section>
+  <section><h2>Próximos passos</h2><ol><li>Torne o código seu: no console, abra este projeto e siga “Seu código” para copiá-lo para o seu GitHub e conectá-lo.</li><li>Troque o Dockerfile pelo do seu app e faça push: cada push faz o build e o deploy, sem tirar o serviço do ar.</li><li>Adicione o seu domínio no serviço web, em Domínios.</li></ol></section>
+</main>
+</body>
+</html>

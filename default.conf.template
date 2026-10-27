@@ -1,0 +1,20 @@
+# ${PORT} comes from the platform; nginx's own variables ($lang…) are left as they are.
+map $http_accept_language $lang {
+    default en;
+    ~*^pt   pt;
+}
+
+server {
+    listen ${PORT};
+    root /usr/share/nginx/html;
+
+    # The platform's health check.
+    location = /health {
+        default_type application/json;
+        return 200 '{"ok":true}';
+    }
+
+    location = / {
+        try_files /index.$lang.html =404;
+    }
+}
